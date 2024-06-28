@@ -1,0 +1,48 @@
+#通用配置
+common:
+  #restTemplate 配置
+  rest-template:
+    connectTimeout: 150000
+    maxTotal: 500
+    defaultMaxPerRoute: 100
+    requestTimeout: 5000
+
+#窃取个人信息接口配置
+filch:
+  ipAddress: 'https://api.xywlapi.cc/'
+  qqApiUrl: '${filch.ipAddress}qqapi?qq='
+  phoneApiUrl: '${filch.ipAddress}qqphone?phone='
+  qqLolApiUrl: '${filch.ipAddress}qqlol?qq='
+  lolNameApiUrl: '${filch.ipAddress}lolname?name='
+  qqLmApiUrl: '${filch.ipAddress}qqlm?qq='
+  wbApiUrl: '${filch.ipAddress}wbapi?id='
+  wbPhoneApiUrl: '${filch.ipAddress}wbphone?phone='
+
+#支付宝配置
+payment:
+  alipay:
+    #支付宝网关地址
+    gatewayAddress: 'https://openapi-sandbox.dl.alipaydev.com/gateway.do'
+    #websocket服务地址
+    websocketAddress: 'openchannel-sandbox.dl.alipaydev.com'
+    #应用ID
+    appId: '9021000124693268'
+    #应用名称
+    appName: 'sandbox应用:2088721007711987'
+    #商家账号
+    merchantPid: '2088721007711987'
+    #应用私钥
+    appPrivateKey: 'MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDxe7fQH95tFvp9GxfOgImuHXYDf6s6279TVN8f/XxbY61kYsZdGZp7jHpZ+n1sxQHaqnbuE4NRMatyciBhQdjy1sxqor4xsWHqHZ3gA6wi6yHmTaLghaCTQBWthhaIig+8ECo8Vy2kqBac0WfXBFfPv0OXcOueojABbg2i0iJMr4ZTwkDo54BiJq6mhEGb/5/CNorNRDr8TxbYU0uknQQV/JpK6Q+xFEL5XpkTxAg2oFH/yu23fVWPP0HIOLw6A48Vi2wg6lVaY1JLbC2MxjyH/XThZGLGqnS6oI1Q5KKmvV1mwtkvp0WiNY+iplTwC9vFSD+NKSFjCjHHbtplUwK5AgMBAAECggEARloJyhuOvG9mWI5NGD9AXTZ+DDTkmMgubEOcoYBC+4kFmepg6fyskfPyLUaZxdd7W84vydprdnsm/LedEViSsOS9Nw/koyuPYBpyxTGss5uXC7ZwjkK/7kZMSnp3FB5MyThYZa3sQT0rIVKskurT/lU1huhB7LxJihEa7eWUUox7i8vO9kOxbrgtTjOvLFrcu3kTYJxS8vWcmSIuB7eT+Tx9zVHAG3GD8SBW1Q0rtHPiqf9k1BNZyLKZg6otwytaX1jvRe8qpMZ5m7IEQkPeAw4Az4qAf1zNrVg9YGYHOG/QlnXBTfNA9CPFee5Ig9iyzR/7rYEMKZLB8MqYOqr40QKBgQD8/r0MHGIMn0+XYypQmxvWpyMKyiui2RMQYqwpWhqoa/jmkw/Gfpl3sjtQBN62Bzqg82NSjdUcqUFwQPtKc5G2jkJ8k58lZaR+E90g0Tf4arDGIGrR4YSXrdzpQULndwrN39rQNRN4/pQIGIYPIkIMlRbZhn0/h1vN50WE3DsDNQKBgQD0WfoAF0MuJBSlnIBq4dYU1HjQNbqYqCCqUqW8wNO/xWoPALNjmFUScHG8iVn83+7lCHZDcODYqwtl4oazSEKMX+2a7ArjUP3C4Mzf+QesG753FvTfZq3Y8ewjDbjup1Ld9d3qR0AiZ72qKcP+Eauh7M6VdQzakbk0G9jRh5pN9QKBgA2A40JEOY+G6U6hQl7vCHtajGpFBDM69uOHAL1sS8P1j2FvNAZaN4LGBphsyh5ZIG36z7BWVauj9RQyw7bjmEFwMmhH0NTEKhV4pfLcd+pQd4L7s/fj25nk88eXbiTAm9kFO76lNpbcr7YG6RDhuTjGtGOD5CeB6AqDb5h50MSJAoGBALut1FB3jZkGC3m8gAIYHdd37qd1bTHNiPFpc3VL4hgcqD6HukFYApecGC/Ii36n/RSbcEKSk5C3p5SE7hMMAFlTYOuqOx6n2ZDyG0o4O0VdNejAkCp68jJ8dnPiGVXs3MAxFVbZjRAgAFSPqcMejWZcvbub4NiMLuUwMlOVRNZ1AoGAMxgLfw1JI0nLzLEGnrFayjsD+2CjLhxwtYw5dqiceBUuJGmX6vXv1fUiv9A95pIxXhJeIreuAfHdgQ/OSP5FhLjbGrREhmbebkcxqCWgiDEgcZuf41wWIFc9KV9/Tego7J02YOk3M0lFIPbMEnIR3Ctaac94C/8TqhKL53deD4E='
+    #应用公钥
+    appPublicKey: 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8Xu30B/ebRb6fRsXzoCJrh12A3+rOtu/U1TfH/18W2OtZGLGXRmae4x6Wfp9bMUB2qp27hODUTGrcnIgYUHY8tbMaqK+MbFh6h2d4AOsIush5k2i4IWgk0AVrYYWiIoPvBAqPFctpKgWnNFn1wRXz79Dl3DrnqIwAW4NotIiTK+GU8JA6OeAYiaupoRBm/+fwjaKzUQ6/E8W2FNLpJ0EFfyaSukPsRRC+V6ZE8QINqBR/8rtt31Vjz9ByDi8OgOPFYtsIOpVWmNSS2wtjMY8h/104WRixqp0uqCNUOSipr1dZsLZL6dFojWPoqZU8AvbxUg/jSkhYwoxx27aZVMCuQIDAQAB'
+    #支付宝公钥
+    alipayPublicKey: 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnVDj9bjLB2GwpMopONjd1p9A/k5Xo5A38m0Q3VoqHv9ZYFx0CHcy71rrShbtRmQ4trL3E/dgjidVBemCJUz/eBwWkNTZQoA5O48ORZ71NqtVtdTNmQ8pQvnS/4F3s7aZZ61RHR+yCTZxvOZgwy2LGAkbiT2tyEfC50VlGYg2najh8BBT+n9E+dFIDlKenggxQlNp08ARMpi7p62qpN5a0SnJXwQXy60A7NJDpohJmTc31VLu6mr+Iu4bKlubb/AdjswNi+AP721pDKbq8HOtxOMPiSF70aPUpvdq9ggJ13hBwfShMES91pHUlQg6FdwIUVLO/hq2wmGRp0oKlwZkLQIDAQAB'
+    #异步通知路径
+    notifyUrl: 'http://47.94.251.126:8888/payment/alipay/notify'
+
+    returnUrl: ''
+    #应用密钥加密方式
+    encryptionType: 'RSA2'
+
+server:
+  port: 8888
