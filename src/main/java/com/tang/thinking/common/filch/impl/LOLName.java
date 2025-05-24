@@ -3,6 +3,7 @@ package com.tang.thinking.common.filch.impl;
 import com.tang.thinking.common.filch.FilchCodeStrategy;
 import com.tang.thinking.filch.service.FilchService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 

@@ -1,3 +1,18 @@
+#数据连接配置
+server:
+  port: 8888
+  servlet:
+    context-path: /thinking
+spring:
+  application:
+    name: thinking
+  datasource:
+    url: jdbc:mysql://47.94.251.126:3306/thinking?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useOldAliasMetadataBehavior=true&useSSL=false&allowPublicKeyRetrieval=true
+    password: root
+    username: tang1104
+
+
+
 #通用配置
 common:
   #restTemplate 配置
@@ -39,10 +54,6 @@ payment:
     alipayPublicKey: 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnVDj9bjLB2GwpMopONjd1p9A/k5Xo5A38m0Q3VoqHv9ZYFx0CHcy71rrShbtRmQ4trL3E/dgjidVBemCJUz/eBwWkNTZQoA5O48ORZ71NqtVtdTNmQ8pQvnS/4F3s7aZZ61RHR+yCTZxvOZgwy2LGAkbiT2tyEfC50VlGYg2najh8BBT+n9E+dFIDlKenggxQlNp08ARMpi7p62qpN5a0SnJXwQXy60A7NJDpohJmTc31VLu6mr+Iu4bKlubb/AdjswNi+AP721pDKbq8HOtxOMPiSF70aPUpvdq9ggJ13hBwfShMES91pHUlQg6FdwIUVLO/hq2wmGRp0oKlwZkLQIDAQAB'
     #异步通知路径
     notifyUrl: 'http://47.94.251.126:8888/payment/alipay/notify'
-
     returnUrl: ''
     #应用密钥加密方式
     encryptionType: 'RSA2'
-
-server:
-  port: 8888

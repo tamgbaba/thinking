@@ -26,7 +26,7 @@ public class RestTemplateConfig {
     private int maxTotal;
     //同路由下最大连接数
     private int defaultMaxPerRoute;
-    //连接池请求时间
+    //连接池请求时间FilchCodeStrategy
     private int requestTimeout;
     /**
      * rest模板

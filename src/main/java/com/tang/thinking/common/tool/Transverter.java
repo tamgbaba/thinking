@@ -1,4 +1,4 @@
-package com.tang.thinking.common.utools;
+package com.tang.thinking.common.tool;
 
 
 import java.lang.reflect.Constructor;
